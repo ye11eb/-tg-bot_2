@@ -10,16 +10,16 @@ const Form = () => {
     const {tg} = useTelegram
 
     useEffect(() => {
-        tg.MainButton.setParams({
+        tg?.MainButton.setParams({
             text: 'відправити данні'
         })
     }, [tg])
 
     useEffect(() => {
         if (!street || !country) {
-            tg.MainButton.hide()
+            tg?.MainButton.hide()
         }else{
-            tg.MainButton.show()
+            tg?.MainButton.show()
         }
     }, [country, street, tg])
 
